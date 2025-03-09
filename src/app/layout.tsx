@@ -3,7 +3,7 @@ import { Geist, Geist_Mono, Parisienne } from "next/font/google";
 import "./globals.css";
 import ClarityScript from "./components/ClarityScript";
 import GoogleTagManager from "./components/GoogleTagManager";
-
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +36,7 @@ export default function RootLayout({
       <head>
         <ClarityScript />
         <GoogleTagManager />
+        <GoogleAnalytics />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${parisienne.variable} antialiased`}
