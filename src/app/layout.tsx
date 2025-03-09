@@ -4,6 +4,7 @@ import "./globals.css";
 import ClarityScript from "./components/ClarityScript";
 import GoogleTagManager from "./components/GoogleTagManager";
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import Script from 'next/script';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,18 +27,37 @@ export const metadata: Metadata = {
   description: "The next generation of AI for event marketplaces and portals",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
+        {/* Google Tag Manager and Analytics Scripts */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-FH0EWNXHSD"
+        />
+        <Script
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-FH0EWNXHSD');
+            `,
+          }}
+        />
+        
+        {/* Render the Clarity Script */}
         <ClarityScript />
+        
+        {/* Render Google Tag Manager (including noscript) */}
         <GoogleTagManager />
+        
+        {/* Render Google Analytics (including noscript) */}
         <GoogleAnalytics />
       </head>
+    
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${parisienne.variable} antialiased`}
       >
