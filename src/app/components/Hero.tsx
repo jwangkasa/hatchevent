@@ -7,7 +7,7 @@ export function Hero() {
         <h1 className="text-center text-[38px] leading-[40px] text-[#172026] text-medium font-parisienne">
           Bringing Events to Life
         </h1>
-        <div className="flex w-full max-w-[500px] px-4 justify-center items-center">
+        <div className="flex w-full max-w-[400px] px-4 justify-center items-center">
             <p className="text-center pt-3 text-xs font-medium text-[#36485C] pb-4">
                 HatchEvent empowers event organizers to create unforgettable experiences with AI and cutting-edge technology. It simplifies event-related services, ensuring a seamless planning process for both private and corporate event planners.
             </p>
