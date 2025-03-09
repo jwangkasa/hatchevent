@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Parisienne } from "next/font/google";
 import "./globals.css";
+import ClarityScript from "./components/ClarityScript";
+import GoogleTagManager from "./components/GoogleTagManager";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,10 +33,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <ClarityScript />
+        <GoogleTagManager />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${parisienne.variable} antialiased`}
       >
-        {children}
+
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFR5FJ5H"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      {children}
       </body>
     </html>
   );
