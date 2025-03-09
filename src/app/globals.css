@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+.font-parisienne {
+    font-family: var(--font-parisienne);
+  }
+  
