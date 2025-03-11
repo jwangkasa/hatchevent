@@ -1,6 +1,7 @@
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 
+
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -20,6 +21,7 @@ export default function Home() {
       <div className="relative z-10">
         <Navbar />
         <Hero />
+       
       </div>
     </div>
   );

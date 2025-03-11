@@ -2,9 +2,10 @@ import Image from "next/image";
 import Logo from "../../../public/logo.png";
 import User from "../../../public/user.png";
 import Menu from "../../../public/menu.png";
+import Link from "next/link";
 
 const navLinks = [
-  { name: "About Us" },
+  { name: "About Us", href: "/about" },
   { name: "Vendor" },
   { name: "Affiliates" },
   { name: "Careers" },
@@ -14,11 +15,17 @@ export function Navbar() {
   return (
     <nav className="flex w-full items-center justify-between px-[20px] py-[24px] lg:container lg:mx-auto lg:px-10">
       <div className="flex items-center">
-        <Image src={Logo} alt="Logo" className="w-[45px]" />
+        <Link href="/">
+          <Image src={Logo} alt="Logo" className="w-[45px]" />
+        </Link>
         <div className="hidden lg:flex pl-[74px] gap-x-[56px]">
           {navLinks.map((item, index) => (
             <p key={index} className="text-[#36485C] font-medium">
-              {item.name}
+              {item.href ? (
+                <Link href={item.href}>{item.name}</Link>
+              ) : (
+                item.name
+              )}
             </p>
           ))}
         </div>
