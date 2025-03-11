@@ -5,6 +5,7 @@ import ClarityScript from "./components/ClarityScript";
 import GoogleTagManager from "./components/GoogleTagManager";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -52,6 +53,7 @@ export default function RootLayout({
             `,
           }}
         />
+        <Analytics />
 
         {/* Render the Clarity Script */}
         <ClarityScript />
