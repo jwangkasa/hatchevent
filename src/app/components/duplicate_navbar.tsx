@@ -9,8 +9,7 @@ import Link from "next/link";
 
 const navLinks = [
   { name: "About Us", href: "/about" },
-  { name: "Contact Us" , href: "/contactus"},
-  { name: "Vendors"},
+  { name: "Vendor" , href: "/contactus"},
   { name: "Affiliates" },
   { name: "Careers" },
 ];
@@ -38,6 +37,9 @@ export function Navbar() {
 
       {/* User Profile and Menu */}
       <div className="flex gap-x-5 items-center">
+        <p className="hidden lg:flex font-medium text-[#36485C] pr-[38px]">
+          Contact Us
+        </p>
         <div className="flex items-center gap-x-2">
           <Image src={User} alt="User Profile" className="w-[38px]" />
           <span className="hidden font-medium text-[#36485C] lg:block">
@@ -63,7 +65,9 @@ export function Navbar() {
               {item.href ? <Link href={item.href}>{item.name}</Link> : item.name}
             </div>
           ))}
-         
+          <div className="text-[#36485C] font-medium py-2">
+            <Link href="/contactus">Contact Us</Link>
+          </div>
           <div className="text-[#36485C] font-medium py-2">Sign in</div>
         </div>
       </div>
