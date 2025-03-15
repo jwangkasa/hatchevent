@@ -29,14 +29,13 @@ export default function Home() {
               vendor management process. Traditional event planning often involves time-consuming tasks such as vendor sourcing, contract negotiations, and coordination, which can lead to inefficiencies and increased costs. HatchEvent addresses these challenges by introducing an intelligent, AI-driven event portal that revolutionizes how vendors are selected, managed, and integrated into events.
               <br />
               <br />
-              <p className="text-center pt-3 text-xs sm:text-sm md:text-base lg:w-1/2 font-medium text-[#36485C] pb-4 font-sans break-words whitespace-normal">
               Please direct your contact to: 
               <br/>
               1 Coleman Street, #04-02, The Adelphi, Singapore 179803
               <br/>
               Attention to: <strong>weikien.yeo@hatchevent.com</strong>
               
-            </p>
+            
               <br />
               <br />
               

@@ -28,13 +28,13 @@ export default function Home() {
               <br />
               <br/>
               
-             <p>Alternatively you can reach out to us at:
+             Alternatively you can reach out to us at:
                 <br/>
                  Email: enquiry@hatchevent.com
                  <br/>
                  1 Coleman Street, #04-02, The Adelphi, Singapore 179803
               
-            </p>
+            
             </p>
           </div>
         </div>
